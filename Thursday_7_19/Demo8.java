@@ -31,15 +31,16 @@ public class Demo8 extends JFrame {
         String[] dd = {"九寨沟", "故宫", "天安门", "长城"};
         jlist = new JList(dd);
         jsp = new JScrollPane(jlist);
-
+        jlist.setVisibleRowCount(2);
         //设置布局管理器
-        this.setLayout(new GridLayout(3, 1));
+        this.setLayout(new GridLayout(2, 1));
 
         //添加组件
         jp1.add(jl1);
         jp1.add(jcb1);
         jp2.add(jl2);
-        jp2.add(jlist);
+        jp2.add(jsp);
+        //jp2.add(jlist)是错误的
 
         this.add(jp1);
         this.add(jp2);
